@@ -10,7 +10,7 @@ import queue
 from pathlib import Path
 from typing import List, NamedTuple
 
-st.set_page_config(page_title="Object Recognition Playground", page_icon="images/oxbrain_favicon.png", layout="wide")
+st.set_page_config(page_title="Object Recognition Playground", page_icon="images/playground_favicon.png", layout="wide")
 
 st.elements.utils._shown_default_value_warning=True
 
@@ -817,11 +817,11 @@ header = """
 """
 
 # Replace `image_file_path` with the actual path to your image file
-image_file_path = "images/oxbrain_header_background.jpg"
+image_file_path = "images/playground_background.png"
 with open(image_file_path, "rb") as image_file:
     encoded_string = base64.b64encode(image_file.read()).decode()
 
-st.markdown(header.format(encoded_string, img_to_bytes("images/oxbrain_logo_trans.png")),
+st.markdown(header.format(encoded_string, img_to_bytes("images/playground_logo.png")),
             unsafe_allow_html=True)
 
 spinner = st.empty()
@@ -990,7 +990,7 @@ footer = """
 <div class="content-container">
     <div class="footer">
         <div class="left-column-footer">
-            <b><span style="color: #FAFAFA;">Contents &copy; oxbr</span><span style="color: #FCBC24;">AI</span><span style="color: #FAFAFA;">n 2023</span></b>
+            <b><span style="color: #FAFAFA;">Created by Alex White 2023</span></b>
         </div>
         <div class="middle-column-footer">
             <b>DISCLAIMER: No images or data are recorded or stored. This playground is intended for educational purposes only.</b>
